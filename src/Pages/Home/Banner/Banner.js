@@ -20,7 +20,7 @@ const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Hello I'm Emon</h3>
+          <h3>Hello My name's Emon</h3>
           <p>I am proffitional Photograper</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -32,7 +32,7 @@ const Banner = () => {
         />
 
         <Carousel.Caption>
-          <h3>Hello I'm Emon</h3>
+          <h3>Hello My name's Emon</h3>
           <p>I am proffitional Photograper</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -44,7 +44,7 @@ const Banner = () => {
         />
 
         <Carousel.Caption>
-        <h3>Hello I'm Emon</h3>
+        <h3>Hello My name's Emon</h3>
           <p>I am proffitional Photograper</p>
         </Carousel.Caption>
       </Carousel.Item>
