@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-
+    const navigate =useNavigate()
+    const NavigateSigup= ()=>{
+        navigate('/sigup')
+    }
   return (
       <div className= 'container w-50 mx-auto'>
     
@@ -23,7 +26,7 @@ const Login = () => {
           Login
         </Button>
       </Form>
-   
+      <p className='mt-2'>Create an account? <Link to="/sigup" className='text-danger pe-auto text-decoration-none ' onClick={NavigateSigup}>SingUp </Link> </p>
       </div>
 
 
