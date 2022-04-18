@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div className='home'>
            <h1 className='text-center  pb-2  text-primary' > Wedding Photograper</h1>
-        
+
             <Banner></Banner>
             <Service></Service>
         </div>
