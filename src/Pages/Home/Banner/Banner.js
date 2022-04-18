@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import'./Banner.css'
 import { Carousel, CarouselItem } from 'react-bootstrap';
 import img1 from '../../../images/banner/banner1.jpg.jpg'
 import img2  from '../../../images/banner/banner2.jpg.jpg'
@@ -14,8 +15,8 @@ const Banner = () => {
              <div>
                  <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
+        <img 
+          className="d-block w-100 mx-auto banner1"
           src={img1}
           alt="First slide"
         />
@@ -26,7 +27,7 @@ const Banner = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 banner1"
           src={img3}
           alt="Second slide"
         />
@@ -38,7 +39,7 @@ const Banner = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 banner1"
           src={img2}
           alt="Third slide"
         />

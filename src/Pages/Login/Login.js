@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.int';
+import GoogleLogin from './GoogleLogin/GoogleLogin';
 
 ;
 
@@ -60,8 +61,9 @@ const Login = () => {
         </Form>
         {errorElement}
         <p> Do you new? <button onClick={NavigateSigup} className='text-primary  btn'>Please Sigup</button></p>
-      
-      
+
+         <GoogleLogin></GoogleLogin>  
+    
       </div>
     );
 };
