@@ -9,6 +9,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import About from './Pages/Abot/About';
 import Sigup from './Pages/Login/Sigup/Sigup';
 import RequreAuth from './Pages/Login/RequreAuth/RequerAuth';
+import Blogs from './Pages/Home/Blogs/Blogs';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         }></Route>
          <Route path='/sigup' element={<Sigup></Sigup>}></Route>
          <Route path='/about' element={<About></About>}></Route>
+         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
    </Routes>
           
           <Footer></Footer>

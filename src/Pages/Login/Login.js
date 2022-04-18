@@ -1,11 +1,13 @@
 import React ,{useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail ,useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.int';
 import GoogleLogin from './GoogleLogin/GoogleLogin';
 import './Login.css'
 ;
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
     const emailRef = useRef(' ')
@@ -41,6 +43,19 @@ const Login = () => {
       navigate('/sigup')
     }
   
+    const [sendPasswordResetEmail, sending,] = useSendPasswordResetEmail(auth );
+
+    const ResetPassword = async () => {
+      const email = emailRef.current.value;
+      if(email){
+        await sendPasswordResetEmail(email);
+        toast('sent email')
+      }
+      else{
+        toast('please enter your email')
+      }
+    }
+
     return (
       <div className='container w-50 mx-auto login'>
         <h1 className='text-primary text-center mt-2'> Login </h1>
@@ -61,9 +76,13 @@ const Login = () => {
         </Form>
         {errorElement}
         <p> Do you new? <button onClick={NavigateSigup} className='text-primary  btn'>Please Sigup</button></p>
-
+        <p>Forget Password?<button onClick={ResetPassword} className='text-primary  btn   '>Reset password</button></p>
+       
          <GoogleLogin></GoogleLogin>  
-    
+         <ToastContainer>
+
+     </ToastContainer>
+
       </div>
     );
 };
