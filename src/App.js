@@ -10,6 +10,7 @@ import About from './Pages/Abot/About';
 import Sigup from './Pages/Login/Sigup/Sigup';
 import RequreAuth from './Pages/Login/RequreAuth/RequerAuth';
 import Blogs from './Pages/Home/Blogs/Blogs';
+import NotFound from './Pages/Shared/Header/NotFound/NotFound';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
          <Route path='/sigup' element={<Sigup></Sigup>}></Route>
          <Route path='/about' element={<About></About>}></Route>
          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+         <Route path='*' element={<NotFound></NotFound>}></Route>
    </Routes>
           
           <Footer></Footer>
