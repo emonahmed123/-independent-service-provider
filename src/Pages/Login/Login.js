@@ -32,7 +32,7 @@ const Login = () => {
       errorElement = <p className='text-danger'>Error: {error?.message} </p>
   
     }
-    const handleSubmit = event => {
+    const handleLogin = event => {
       event.preventDefault()
       const email = emailRef.current.value;
       const password = passwordRef.current.value
@@ -60,7 +60,7 @@ const Login = () => {
       <div className='container w-50 mx-auto login'>
         <h1 className='text-primary text-center mt-2'> Login </h1>
   
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
