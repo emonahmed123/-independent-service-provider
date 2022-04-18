@@ -9,7 +9,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import About from './Pages/Abot/About';
 import Sigup from './Pages/Login/Sigup/Sigup';
 import RequreAuth from './Pages/Login/RequreAuth/RequerAuth';
-import Service from './Pages/Home/Service/Service';
+
 
 function App() {
   return (

@@ -36,7 +36,7 @@ const Sigup = () => {
         return (
       
          
-                <div className='register-form'>
+                <div className='register-form sigup'>
                 <h2  className='text-primary text-center mt-2' style={{textAlign: 'center'}}>Please Register</h2>
                 <form onSubmit={handleSigup}>
                     <input type="text" name="name" id="" placeholder='Your Name' required/>

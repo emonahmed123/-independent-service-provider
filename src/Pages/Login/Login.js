@@ -4,7 +4,7 @@ import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.int';
 import GoogleLogin from './GoogleLogin/GoogleLogin';
-
+import './Login.css'
 ;
 
 const Login = () => {
@@ -42,7 +42,7 @@ const Login = () => {
     }
   
     return (
-      <div className='container w-50 mx-auto'>
+      <div className='container w-50 mx-auto login'>
         <h1 className='text-primary text-center mt-2'> Login </h1>
   
         <Form onSubmit={handleSubmit}>
